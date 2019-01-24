@@ -1,0 +1,25 @@
+local gpu = require("component").gpu
+local term = require("term")
+local unicode = require("unicode")
+local computer = require("computer")
+gpu.setBackground(0x00FF00)
+x, y = gpu.getResolution()
+gpu.fill(1, 1, x, y, " ")
+gpu.setForeground(0xFF0000)
+term.setCursor(1, 1)
+print("Xindons"..unicode.char(25805, 20316, 31995, 32479))
+io.write(unicode.char(35831, 36755, 20837, 23494, 30721, 65306))
+term.setCursorBlink(false)
+gpu.setForeground(0x00FF00)
+pswd = io.read()
+term.setCursorBlink(true)
+gpu.setForeground(0xFF0000)
+if(pswd == "628778213") then
+gpu.setBackground(0x000000)
+gpu.setForeground(0xFFFFFF)
+term.clear()
+print(unicode.char(27426, 36814, 20351, 29992).."MineHat")
+else
+computer.beep(1000, 1)
+computer.shutdown()
+end
